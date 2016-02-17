@@ -84,7 +84,13 @@ namespace ScriptManager.Repository
                 existingScript.Field = script.Field;
             }
             else
+            {
                 _context.Scripts.Add(script);
+            }
+            _context.Entry(script.Language).State = EntityState.Modified;
+            _context.Entry(script.Product).State = EntityState.Modified;
+            _context.Entry(script.Screen).State = EntityState.Modified;
+            _context.Entry(script.Field).State = EntityState.Modified;
 
             _context.SaveChanges();
             return true;

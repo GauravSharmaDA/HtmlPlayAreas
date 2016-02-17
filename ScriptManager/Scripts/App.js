@@ -22,36 +22,19 @@ sampleApp.config(['$routeProvider',
         });
   }]);
 
-sampleApp.controller('ScriptDetailController', function($scope, $routeParams, $http)
-{
-    $scope.Id = $routeParams.scriptId;
-    
-    function LoadScript($scope, $http)
-    {
-        $http.get(httpUrl + '/GetScriptById?scriptId=' + $scope.Id).
-        success(function (data) {
-            alert(data);
-            }            
-        );
-    }
-    LoadScript($scope, $http);
-}
-);
-
-sampleApp.controller('ScriptController', function ($scope,$http) {
+sampleApp.controller('ScriptController', function ($scope, $http) {
     var id = 0;
-
+    $scope.rowCollection = [];
     function LoadScripts($scope, $http) {
-        $http.get(httpUrl + '/api/script/?').
+        $http.get(httpUrl + '/api/script').
             success(function (data) {
-                
-                for (id; id < data.length; id++)
-                {
+               
+                for (id; id < data.length; id++) {
                     $scope.rowCollection.push(data[id]);
                 }
             });
     };
-    LoadScripts($scope, $http);   
+    LoadScripts($scope, $http);
 
 });
 
@@ -61,3 +44,4 @@ sampleApp.controller('ReleasesController', function ($scope) {
     $scope.message = 'This is releases controller.';
 
 });
+

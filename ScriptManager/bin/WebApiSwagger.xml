@@ -69,6 +69,23 @@
             This represents screen as standard response to a consumer application
             </summary>
         </member>
+        <member name="T:ScriptManager.Controllers.ScreenController">
+            <summary>
+            Returns different objects related to screen
+            </summary>
+        </member>
+        <member name="M:ScriptManager.Controllers.ScreenController.Get(System.Int32)">
+            <summary>
+            Returns fields for a screen
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptManager.Controllers.ScreenController.Get">
+            <summary>
+            Returns list for screens
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:ScriptManager.Controllers.ScriptController">
             <summary>
             All the functionality related to the script

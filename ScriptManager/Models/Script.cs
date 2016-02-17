@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ScriptManager.Models
@@ -17,12 +18,12 @@ namespace ScriptManager.Models
         public int Id { get; set; }
         public string ReleaseName { get; set; }
         public bool IsActive { get; set; }
-        
+
         public DateTime CreatedAt { get; set; }
-        public List<Team> Teams { get;set;}        
+        public List<Team> Teams { get; set; }
         public List<Script> Scripts { get; set; }
     }
-    
+
     /// <summary>
     /// Represents a group of agents
     /// </summary>
@@ -34,7 +35,7 @@ namespace ScriptManager.Models
         }
         public int Id { get; set; }
         public string TeamName { get; set; }
-        public List<Agent> Agents { get; set; }        
+        public List<Agent> Agents { get; set; }
         public List<Release> Releases { get; set; }
     }
 
@@ -55,7 +56,9 @@ namespace ScriptManager.Models
     public class Script
     {
         public int Id { get; set; }
+        [Required]
         public string Title { get; set; }
+
         public Language Language { get; set; }
         public Product Product { get; set; }
         public SubProduct SubProduct { get; set; }
@@ -65,7 +68,7 @@ namespace ScriptManager.Models
         [Column(TypeName = "ntext")]
         public string Text { get; set; }
     }
-    
+
     /// <summary>
     /// Type of customer
     /// </summary>
@@ -80,7 +83,9 @@ namespace ScriptManager.Models
     /// </summary>
     public class Language
     {
+
         public int Id { get; set; }
+        
         public string Name { get; set; }
     }
 
@@ -90,6 +95,7 @@ namespace ScriptManager.Models
     public class Product
     {
         public int Id { get; set; }
+
         public string Name { get; set; }
     }
 
@@ -100,6 +106,7 @@ namespace ScriptManager.Models
     public class SubProduct
     {
         public int Id { get; set; }
+        
         public string Name { get; set; }
     }
 
@@ -113,6 +120,7 @@ namespace ScriptManager.Models
             Fields = new List<Field>();
         }
         public int Id { get; set; }
+        
         public string Name { get; set; }
         public List<Field> Fields { get; set; }
     }
@@ -123,6 +131,8 @@ namespace ScriptManager.Models
     public class Field
     {
         public int Id { get; set; }
+
         public string Name { get; set; }
+        
     }
 }

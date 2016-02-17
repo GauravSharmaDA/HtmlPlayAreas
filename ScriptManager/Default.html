@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Script Manager</title>
+</head>
+<body>
+
+    <div>
+        <h2>All Scripts</h2>
+        <ul id="products" />
+    </div>
+    <div>
+        <h2>Search by ID</h2>
+        <input type="text" id="prodId" size="5" />
+        <input type="button" value="Search" onclick="find();" />
+        <p id="Script" />
+    </div>
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script>
+        var uri = 'http://localhost:59899/api/script';
+
+    $(document).ready(function () {
+      // Send an AJAX request
+      $.getJSON(uri)
+          .done(function (data) {
+            // On success, 'data' contains a list of products.
+              $.each(data, function (key, item) {
+                  
+              // Add a list item for the product.
+              $('<li>', { text: formatItem(item) }).appendTo($('#Script'));
+            });
+          });
+    });
+
+    function formatItem(item) {
+        return item.Title + ' - ' + item.Text + ' - ' + item.Language.Name + ' - ' + item.Screen.Name + ' - ' + item.Field.Name;
+    }
+
+    function find() {
+        
+      var id = $('#prodId').val();
+      $.getJSON(uri)
+          .done(function (data) {
+            $('#Script').text(formatItem(data));
+          })
+          .fail(function (jqXHR, textStatus, err) {
+            $('#Script').text('Error: ' + err);
+          });
+    }
+    </script>
+</body>
+</html>

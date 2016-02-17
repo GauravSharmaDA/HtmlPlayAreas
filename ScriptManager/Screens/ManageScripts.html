@@ -1,0 +1,40 @@
+﻿<h2>Manage Scripts</h2>
+
+<a href="#ScriptDetail/0" class="btn btn-sm btn-success">
+    <i class="glyphicon glyphicon-plus">
+    </i> Add new Script
+</a>
+
+<table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped">
+    <thead>
+        <tr>
+            <th st-sort="firstName">Title</th>
+            <th st-sort="lastName">Screen Name</th>
+            <th st-sort="birthDate">Field Name</th>
+            <th st-sort="balance">Language</th>
+            <th>Script</th>
+            <th></th>
+        </tr>
+        <tr>
+            <th colspan="6"><input st-search="" class="form-control" placeholder="global search ..." type="text" /></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="row in displayedCollection">
+            
+            <td>{{row.Title}}</td>
+            <td>{{row.Screen.Name}}</td>            
+            <td>{{row.Field.Name}}</td>
+            <td>{{row.Language.Name}}</td>
+            <td>{{row.Text}}</td>
+            <td><a class="btn btn-sm btn-success" href="#ScriptDetail/{{row.Id}}"><i class="glyphicon glyphicon-edit"></i> Edit</a></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="5" class="text-center">
+                <div st-pagination="" st-items-by-page="2" st-displayed-pages="3"></div>
+            </td>
+        </tr>
+    </tfoot>
+</table>

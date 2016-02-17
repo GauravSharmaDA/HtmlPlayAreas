@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Customer screen - Document Fulfilment Project</title>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+  
+</head>
+<body id="page-top">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+                <a class="navbar-brand page-scroll" href="#page-top">Customer Journey</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#MatchDocument">Match Document</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#WrongIdNumber">Wrong ID Number</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#OtherEmails">Check Other E-Mails</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#ContactCustomer">Contact Customer</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <section class="bg-dark" id="MatchDocument">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4>Customer Name: <b>John Khan</b><h4>
+                    <h4>ID Number: <b>82124579511236</b></h4>
+                </div>
+                <div class="col-lg-8 " style="text-align:left;padding-top:20px;">
+                    <a class="btn btn-danger page-scroll" href="#WrongIdNumber">Doesn't Belong to This ID</a>
+                    <a class="btn btn-danger page-scroll" href="#OtherEmails">Useless Document</a>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-6">
+                    <img src="doc.png" />
+                </div>
+                <div class="col-md-6">
+                    <form class="form-horizontal">
+                        <fieldset>
+
+                            <!-- Form Name -->
+                            <legend style="color:white;">Capture Document</legend>
+
+                            <!-- Select Basic -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="selectbasic">Select Document Type</label>
+                                <div class="col-md-4">
+                                    <select id="selectbasic" name="selectbasic" class="form-control">
+                                        <option value="1">Select Document</option>
+                                        <option value="1">Bank Statement</option>
+                                        <option value="2">Payslip</option>
+                                        <option value="3">ID book</option>
+                                        <option value="4">Passport</option>
+                                        <option value="5">Pension Statement</option>
+                                        <option value="6">Utility Bill</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="restOfTheForm">
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Bank Name</label>
+                                    <div class="col-md-4">
+                                        <input id="inputBank" name="inputBank" type="text" placeholder="Enter bank name.." class="form-control input-md">
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Account Number</label>
+                                    <div class="col-md-4">
+                                        <input id="inputAccountNumber" name="inputAccountNumber" type="text" placeholder="Enter account number.." class="form-control input-md">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Branch</label>
+                                    <div class="col-md-4">
+                                        <input id="inputBranch" name="inputBranch" type="text" placeholder="Enter branch code.." class="form-control input-md">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Branch Code</label>
+                                    <div class="col-md-4">
+                                        <input id="inputBranchCode" name="inputBranchCode" type="text" placeholder="Enter branch code.." class="form-control input-md">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Swift Code</label>
+                                    <div class="col-md-4">
+                                        <input id="inputSwiftCode" name="inputSwiftCode" type="text" placeholder="Enter swift code.." class="form-control input-md">
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Address</label>
+                                    <div class="col-md-4">
+                                        <textarea id="inputAddress" name="textinput" type="text" placeholder="Enter swift code.." class="form-control input-md"></textarea>
+
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="singlebutton"></label>
+                                    <div class="col-md-4">
+                                        <a class="btn btn-success page-scroll" href="#OtherEmails">Complete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <div id="busyLoading">
+                        <div><img src="gears.gif" /> Loading...Asking Evidence Management system about Any Pending Request</div>
+                     
+                    </div>
+                    <form class="form-horizontal" id="evidenceRequest2">
+                        <fieldset>
+
+                            <!-- Form Name -->
+                            <legend style="color:white;">Proof of Bank Information is Required</legend>
+
+                            <!-- Select Basic -->
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="textinput">Customer Account Details</label>
+                                <div class="col-md-4">
+                                    First National Bank<br />
+                                    2131326464656<br />
+                                    Rondebosch<br />
+                                    1364564<br />
+                                    SHD6546<br />
+                                </div>
+                                <!-- Button -->
+
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="singlebutton">
+                                    <button id="singlebutton" onclick="javascript: copyInformation();return false;" name="singlebutton" class="btn btn-default">Document contains same data</button>
+                                </label>
+                                <div class="col-md-4">
+                                    <button id="singlebutton" onclick="javascript: copyInformation();return false;" name="singlebutton" class="btn btn-success">Link & Complete Evidence Request</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="singlebutton">
+                                    <button id="singlebutton" name="singlebutton" class="btn btn-danger">Link, But Needs more documents</button>
+                                </label>
+                                <div class="col-md-4">
+                                    <button id="singlebutton" name="singlebutton" class="btn btn-danger">Raise New Evidence Request</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <form class="form-horizontal" id="evidenceRequest">
+                        <fieldset>
+
+                            <!-- Form Name -->
+                            <legend style="color:white;">Proof of Address</legend>
+
+                            <!-- Select Basic -->
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="textinput">Customer Address</label>
+                                <div class="col-md-4">
+                                    101 Stallions<br />
+                                    The Stableyard<br />
+                                    Cape Town<br />
+                                    8000
+                                </div>
+                                <!-- Button -->
+
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="singlebutton">
+                                    <button id="singlebutton" onclick="javascript: copyAddressInformation();return false;" name="singlebutton" class="btn btn-default">Document contains same data</button>
+                                </label>
+                                <div class="col-md-4">
+                                    <button id="singlebutton" onclick="javascript: copyAddressInformation(); completeAddress(); return false;" name="singlebutton" class="btn btn-success">Evidence Request Complete</button>
+
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-info" id="WrongIdNumber">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-lg-offset-0 text-center">
+                    <form class="form-horizontal">
+                        <fieldset>
+
+                            <!-- Form Name -->
+                            <legend>Link it Another Customers</legend>
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-lg-4 control-label" for="textinput">ID Number</label>
+                                <div class="col-lg-4">
+                                    <input id="textinput" name="textinput" type="text" placeholder="type id number here.." class="form-control input-md">
+
+                                </div>
+                            </div>
+                            <!-- Button (Double) -->
+                            <div class="form-group">
+                                <label class="col-lg-4 control-label" for="button1id"></label>
+                                <div class="col-lg-8" style="text-align:left;">
+                                    <a href="#MatchDocument" class="btn btn-success page-scroll">
+                                        Link to new Customer
+                                    </a>
+                                    <a href="#MatchDocument" class="btn btn-danger page-scroll">Orphan Document</a>
+                                </div>
+                            </div>
+
+
+
+                        </fieldset>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="OtherEmails">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-heading">Other emails from customer</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <a class="page-scroll" href="#MatchDocument"><img src="email.png" /></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="ContactCustomer"></section>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+    <script language="javascript" type="text/javascript">
+        $("#restOfTheForm").hide();
+        $("#evidenceRequest").hide();
+        $("#evidenceRequest2").hide();
+        $("#busyLoading").hide();
+        $("#selectbasic").change(function () {
+            $("#restOfTheForm").show(1000);
+            $("#busyLoading").show(1000).delay(5000).hide(1000);
+            $("#evidenceRequest").delay(6000).show(1000);
+        });
+        function copyAddressInformation() {
+            $('#inputAddress').val("101 Stallions The Stableyard Cape Town 8000");
+        }
+        function completeAddress() {
+            $('#inputAddress').val("101 Stallions The Stableyard Cape Town 8000");
+            $("#evidenceRequest").hide(1000);
+            $("#busyLoading").show(1000).delay(5000).hide(1000);
+            $("#evidenceRequest2").delay(6000).show(1000);
+        }
+        function copyInformation() {
+            $("#inputBank").val("First National Bank");
+            $("#inputAccountNumber").val("9878979897");
+            $("#inputBranch").val("Rondebosch");
+            $("#inputBranchCode").val("5465466");
+            $("#inputSwiftCode").val("AS65ASD");
+
+        }
+    </script>
+</body>
+</html>

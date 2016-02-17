@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ScriptManager</name>
+    </assembly>
+    <members>
+        <member name="T:ScriptManager.Models.Flag">
+            <summary>
+            A Quality analyst can flag a field for a specific agent
+            </summary>
+        </member>
+        <member name="T:ScriptManager.Models.Release">
+            <summary>
+            Class Represents the release to one or more team(s)
+            </summary>
+        </member>
+        <member name="T:ScriptManager.Models.Team">
+            <summary>
+            Represents a group of agents
+            </summary>
+        </member>
+        <member name="T:ScriptManager.Models.Agent">
+            <summary>
+            Represents an agent 
+            </summary>
+        </member>
+        <member name="T:ScriptManager.Models.Script">
+            <summary>
+            Represents a unique script for a field, a language, a product released to specific team
+            </summary>
+        </member>
+        <member name="T:ScriptManager.Models.CustomerType">
+            <summary>
+            Type of customer
+            </summary>
+        </member>
+        <member name="T:ScriptManager.Models.Language">
+            <summary>
+            Represents language
+            </summary>
+        </member>
+        <member name="T:ScriptManager.Models.Product">
+            <summary>
+            Represents a product
+            </summary>
+        </member>
+        <member name="T:ScriptManager.Models.SubProduct">
+            <summary>
+            Represents a subproduct
+            </summary>
+        </member>
+        <member name="T:ScriptManager.Models.Screen">
+            <summary>
+            Represents a screen
+            </summary>
+        </member>
+        <member name="T:ScriptManager.Models.Field">
+            <summary>
+            Represents a field
+            </summary>
+        </member>
+        <member name="T:ScriptManager.Models.ScriptResponse">
+            <summary>
+            This represents script as standard response to a consumer application
+            </summary>
+        </member>
+        <member name="T:ScriptManager.Models.ScreenResponse">
+            <summary>
+            This represents screen as standard response to a consumer application
+            </summary>
+        </member>
+        <member name="T:ScriptManager.Controllers.ScriptController">
+            <summary>
+            All the functionality related to the script
+            </summary>
+        </member>
+        <member name="M:ScriptManager.Controllers.ScriptController.Get">
+            <summary>
+            Returns all scripts from the database
+            </summary>
+            <returns>All scripts from the database</returns>
+            
+        </member>
+        <member name="M:ScriptManager.Controllers.ScriptController.Get(System.Int32)">
+            <summary>
+            Returns script by Matching to its Id number
+            </summary>
+            <param name="scriptId">Unique ID of a Script</param>
+            <returns>Returns an object of type script.</returns>
+        </member>
+        <member name="M:ScriptManager.Controllers.ScriptController.ProvideScript(ScriptManager.ViewModels.ScriptRequestViewModel)">
+            <summary>
+            Search for a script
+            </summary>
+            <param name="request">Type of ScriptRequestViewModel</param>
+            <remarks>Returns appropriate scrtpt as per the filters.</remarks>
+            <response code="400">Bad request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:ScriptManager.Controllers.ScriptController.ProvideScriptsForAScreen(ScriptManager.ViewModels.ScriptRequestViewModel)">
+            <summary>
+            Search for a script
+            </summary>
+            <param name="request">Represents fields for a filter</param>
+            <remarks>Returns appropriate scrtpt as per the filters.</remarks>
+            <response code="400">Bad request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:ScriptManager.Controllers.ScriptController.Save(ScriptManager.Models.Script)">
+            <summary>
+            Saves an instance of a script
+            </summary>
+            <param name="script">Inserts a new or update an existing script</param>
+        </member>
+        <member name="M:ScriptManager.Repository.ScriptRepository.ProvideScriptsForAScreen(ScriptManager.ViewModels.ScriptRequestViewModel)">
+            
+        </member>
+    </members>
+</doc>

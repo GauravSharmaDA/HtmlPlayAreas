@@ -10,6 +10,8 @@ namespace ScriptManager.Models
         public string Text { get; set; }
         public string FlagMessage { get; set; }
         public bool IsFlaggedForAgent { get; set; }
+        public Screen Screen { get; set; }
+        public Field Field { get; set; }
     }
 
     /// <summary>

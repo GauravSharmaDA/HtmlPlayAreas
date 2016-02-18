@@ -110,7 +110,7 @@ namespace ScriptManager.Repository
                 .Include(x => x.Scripts.Select(y => y.Screen))
                 .Include(x => x.Scripts.Select(y => y.Field))
                 .Include(x => x.Scripts.Select(y => y.Product))
-                .Include(x => x.Scripts.Select(y => y.SubProduct))
+                .Include(x => x.Scripts.Select(y => y.SubProduct))                
                 .FirstOrDefault(x => x.Teams.Any(te => te.Id.Equals(team.Id)));
             if (release == null)
                 throw new Exception("Nothing has been released to this agent.");
@@ -123,8 +123,21 @@ namespace ScriptManager.Repository
 
             var screenResponse = new ScreenResponse() { ScreenName = viewModel.ScreenName };
             screenResponse.Scripts = (from s in scripts
-                                      select new ScriptResponse { Text = s.Text }).ToList();
-
+                                      select new ScriptResponse {
+                                          Text = s.Text,
+                                          Screen = s.Screen,
+                                          Field = s.Field
+                                      }).ToList();
+            var flagRepository = new FlagRepository();
+            foreach (var script in screenResponse.Scripts)
+            {
+                var flag = flagRepository.FlaggedForAfield(script.Screen.Id, script.Field.Id, agent.Id);
+                if (flag!=null)
+                {
+                    script.FlagMessage = flag.Comment;
+                    script.IsFlaggedForAgent = true;
+                }
+            }
             return screenResponse;
         }
     }

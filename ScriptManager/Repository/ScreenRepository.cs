@@ -3,7 +3,6 @@ using ScriptManager.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Data.Entity;
-using System;
 
 namespace ScriptManager.Repository
 {
@@ -33,9 +32,14 @@ namespace ScriptManager.Repository
             return _context.Languages.ToList();
         }
 
-        internal IEnumerable<Product> GetProducts()
+        public IEnumerable<Product> GetProducts()
         {
             return _context.Products.ToList();
+        }
+
+        public IEnumerable<Agent> GetAgents()
+        {
+            return _context.Agents.ToList();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿var sampleApp = angular.module('sampleApp', ['smart-table']);
 
-var httpUrl = 'http://itsltp028/ScriptManager';
+var httpUrl = '';
 
 sampleApp.config(['$routeProvider',
   function ($routeProvider) {
@@ -16,6 +16,14 @@ sampleApp.config(['$routeProvider',
         when('/ScriptDetail/:scriptId', {
             templateUrl: 'Screens/ScriptDetail.html',
             controller: 'ScriptDetailController'
+        }).
+        when('/ReportAMistake', {
+            templateUrl: 'Screens/Flags.html',
+            controller: 'FlagsController'
+        }).
+        when('/FlagDetail/:flagId', {
+            templateUrl: 'Screens/ReportNewIssue.html',
+            controller: 'ReportAnIssueController'
         }).
         otherwise({
             redirectTo: '/ManageScripts'

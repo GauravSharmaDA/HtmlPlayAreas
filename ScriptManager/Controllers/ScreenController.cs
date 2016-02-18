@@ -53,5 +53,15 @@ namespace ScriptManager.Controllers
             return Ok(repository.GetLanguages());
             
         }
+
+        [Route("GetAgents")]
+        [ResponseType(typeof(IEnumerable<Agent>))]
+        public IHttpActionResult GetAgents()
+        {
+            var repository = new ScreenRepository();
+            return Ok(repository.GetAgents());
+
+        }
+
     }
 }

@@ -1,0 +1,51 @@
+﻿<form class="form-horizontal">
+    <fieldset>
+        <!-- Form Name -->
+        <legend>Issue Detail</legend>
+        
+        <!-- Select Basic -->
+        <div class="form-group">
+            <label class="col-md-4 control-label">Select Agent</label>
+            <div class="col-md-4">
+                
+                <select class="form-control" name="screenAgent" id="screenAgent"
+                        ng-options="option.UserName for option in agents"
+                        ng-model="selectedAgent"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label">Select Screen</label>
+            <div class="col-md-4">
+
+                <select class="form-control" ng-change="screenChange()" name="screenSelect" id="screenSelect"
+                        ng-options="option.Name for option in screens"
+                        ng-model="selectedScreen"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label">Select Field</label>
+            <div class="col-md-4">
+                <select class="form-control" name="fieldSelect" id="fieldSelect"
+                        ng-options="option.Name for option in fields"
+                        ng-model="selectedField"></select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Comment</label>
+            <div class="col-md-4">
+                <textarea id="textinput" name="textinput" ng-model="comment" type="text"
+                          placeholder="placeholder" class="form-control input-md"></textarea>              
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput"></label>
+            <div class="col-md-4">
+                <button id="savebutton" ng-click="saveData()" name="savebutton" class="btn btn-success">Save</button>
+                <a href="/#ReportAMistake" class="btn btn-danger">Cancel</a>
+            </div>
+        </div>
+     
+    </fieldset>
+</form>

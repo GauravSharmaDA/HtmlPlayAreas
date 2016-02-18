@@ -85,7 +85,7 @@ namespace ScriptManager.Models
     {
 
         public int Id { get; set; }
-        
+
         public string Name { get; set; }
     }
 
@@ -106,7 +106,7 @@ namespace ScriptManager.Models
     public class SubProduct
     {
         public int Id { get; set; }
-        
+
         public string Name { get; set; }
     }
 
@@ -120,7 +120,6 @@ namespace ScriptManager.Models
             Fields = new List<Field>();
         }
         public int Id { get; set; }
-        
         public string Name { get; set; }
         public List<Field> Fields { get; set; }
     }
@@ -131,7 +130,6 @@ namespace ScriptManager.Models
     public class Field
     {
         public int Id { get; set; }
-
         public string Name { get; set; }
         
     }

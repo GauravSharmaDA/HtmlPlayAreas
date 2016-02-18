@@ -1,0 +1,35 @@
+﻿<h2>Report an Issue</h2>
+<a href="#FlagDetail/0" class="btn btn-sm btn-success">
+    <i class="glyphicon glyphicon-plus">
+    </i> Report New Issue
+</a>
+<table st-table="displayedCollection" st-safe-src="flags"  class="table table-striped">
+    <thead>
+        <tr>
+            <th st-sort="firstName">User Name</th>
+            <th st-sort="lastName">Screen Name</th>
+            <th st-sort="birthDate">Field Name</th>
+            <th st-sort="balance">Comment</th>           
+            <th></th>
+        </tr>
+        <tr>
+            <th colspan="5"><input st-search="" class="form-control" placeholder="global search ..." type="text" /></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="row in displayedCollection">            
+            <td>{{row.Agent.UserName}}</td>
+            <td>{{row.Screen.Name}}</td>
+            <td>{{row.Field.Name}}</td>
+            <td>{{row.Comment}}</td>
+            <td><a class="btn btn-sm btn-success" href="#FlagDetail/{{row.Id}}"><i class="glyphicon glyphicon-edit"></i> Edit</a></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="5" class="text-center">
+                <div st-pagination="" st-items-by-page="2" st-displayed-pages="3"></div>
+            </td>
+        </tr>
+    </tfoot>
+</table>

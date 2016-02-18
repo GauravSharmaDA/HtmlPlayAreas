@@ -25,5 +25,25 @@ namespace ScriptManager.Controllers
             }
             return new System.Web.Http.Results.ExceptionResult(new System.Exception(), this);
         }
+
+        /// <summary>
+        /// Returns list of Reported Issue
+        /// </summary>
+        /// <returns></returns>
+        public IHttpActionResult Get()
+        {
+            return Ok(new FlagRepository().FlaggedIssues());
+        }
+
+        /// <summary>
+        /// Returns Reported Issue by id
+        /// </summary>
+        /// <returns></returns>
+        [Route("GetReportedIssueById")]
+        [ActionName("GetById")]
+        public IHttpActionResult Get(int id)
+        {
+            return Ok(new FlagRepository().FlaggedIssueById(id));
+        }
     }
 }

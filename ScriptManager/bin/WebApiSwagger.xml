@@ -81,6 +81,18 @@
             <param name="flag">Instance of flag</param>
             <returns></returns>
         </member>
+        <member name="M:ScriptManager.Controllers.ReportAnIssueController.Get">
+            <summary>
+            Returns list of Reported Issue
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ScriptManager.Controllers.ReportAnIssueController.Get(System.Int32)">
+            <summary>
+            Returns Reported Issue by id
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:ScriptManager.Controllers.ScreenController">
             <summary>
             Returns different objects related to screen

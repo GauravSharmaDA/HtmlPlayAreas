@@ -34,3 +34,39 @@ C:\Users\ashu_\Documents\Visual Studio 2015\Projects\Scripts\DynamicScriptManage
 C:\Users\ashu_\Documents\Visual Studio 2015\Projects\Scripts\DynamicScriptManager\ScriptManager\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\ashu_\Documents\Visual Studio 2015\Projects\Scripts\DynamicScriptManager\ScriptManager\bin\Swashbuckle.Core.dll
 C:\Users\ashu_\Documents\Visual Studio 2015\Projects\Scripts\DynamicScriptManager\ScriptManager\bin\WebActivatorEx.dll
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\roslyn\csc.exe
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\roslyn\System.Collections.Immutable.dll
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\roslyn\System.Reflection.Metadata.dll
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\roslyn\vbc.exe
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\roslyn\VBCSCompiler.exe
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\roslyn\VBCSCompiler.exe.config
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\ScriptManager.dll.config
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\WebApiSwagger.xml
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\ScriptManager.dll
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\ScriptManager.pdb
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\EntityFramework.dll
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\EntityFramework.SqlServer.dll
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\Microsoft.Web.Infrastructure.dll
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\Newtonsoft.Json.dll
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\Swashbuckle.Core.dll
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\System.Net.Http.Formatting.dll
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\System.Web.Http.dll
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\System.Web.Http.WebHost.dll
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\WebActivatorEx.dll
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\EntityFramework.xml
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\EntityFramework.SqlServer.xml
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\Newtonsoft.Json.xml
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\System.Net.Http.Formatting.xml
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\System.Web.Http.xml
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\bin\System.Web.Http.WebHost.xml
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\obj\Debug\ScriptManager.csprojResolveAssemblyReference.cache
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\obj\Debug\ScriptManager.dll
+C:\Projects\Fedex\HTMLPlayAreas\ScriptManager\obj\Debug\ScriptManager.pdb

@@ -22,13 +22,23 @@ sampleApp.controller('ReportAnIssueController',
         $scope.agents = [{ Id: '0', UserName: 'Please select' }];
         $scope.selectedAgent = $scope.agents[0];
         $scope.returnedField = null;
+        $scope.details2 = null;
+
+        $scope.complete = function () {
+            console.log($scope.agents);
+            $("#tags").autocomplete({
+                source: $scope.agents
+            });
+        };
+
 
         $http.get(httpUrl + '/api/screen')
         .success(function (data) {
-        for (id = 0; id < data.length; id++) {
-            $scope.screens.push(data[id]);
-        }
+            for (id = 0; id < data.length; id++) {
+                $scope.screens.push(data[id]);
+            }
         });
+
 
         $http.get(httpUrl + '/GetAgents')
         .success(function (data) {
@@ -53,9 +63,10 @@ sampleApp.controller('ReportAnIssueController',
             });
         };
 
-        $http.get(httpUrl + '/GetReportedIssueById?id=' + $scope.id)
+        if ($scope.id    != 0) {
+            $http.get(httpUrl + '/GetReportedIssueById?id=' + $scope.id)
         .success(function (data) {
-            
+
             $scope.comment = data.Comment;
             $scope.returnedField = data.Field;
             angular.forEach($scope.screens, function (value, key) {
@@ -73,7 +84,7 @@ sampleApp.controller('ReportAnIssueController',
                 }
             });
         });
-
+        }
         $scope.saveData = function () {
             var data = {
                 "Id": $scope.id,
@@ -86,7 +97,7 @@ sampleApp.controller('ReportAnIssueController',
                     "Name": $scope.selectedScreen.Name
                 },
                 "Agent": {
-                    "Id": $scope.selectedAgent.Id,                    
+                    "Id": $scope.selectedAgent.Id,
                     "UserName": $scope.selectedAgent.UserName
                 },
                 "Comment": $scope.comment
@@ -102,5 +113,5 @@ sampleApp.controller('ReportAnIssueController',
                 $location.path('/ReportAMistake');
             });
         };
-        
+
     });

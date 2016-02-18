@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Web.Http;
 using System.Web.Http.Description;
 using System.Linq;
+using System.Web.Http.Tracing;
+
 namespace ScriptManager.Controllers
 {
     /// <summary>

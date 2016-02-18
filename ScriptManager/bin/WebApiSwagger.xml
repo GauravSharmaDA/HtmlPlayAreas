@@ -69,6 +69,18 @@
             This represents screen as standard response to a consumer application
             </summary>
         </member>
+        <member name="T:ScriptManager.Controllers.ReportAnIssueController">
+            <summary>
+            To Report the mistakes agent made
+            </summary>
+        </member>
+        <member name="M:ScriptManager.Controllers.ReportAnIssueController.Report(ScriptManager.Models.Flag)">
+            <summary>
+            Report an Issue
+            </summary>
+            <param name="flag">Instance of flag</param>
+            <returns></returns>
+        </member>
         <member name="T:ScriptManager.Controllers.ScreenController">
             <summary>
             Returns different objects related to screen

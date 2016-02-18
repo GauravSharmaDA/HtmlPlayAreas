@@ -216,7 +216,7 @@
     <Compile Include="Builders\TeamBuilder.cs" />
     <Compile Include="Configurations\SeedData.cs" />
     <Compile Include="Contexts\ScriptContext.cs" />
-    <Compile Include="Controllers\FlagController.cs" />
+    <Compile Include="Controllers\ReportAnIssueController.cs" />
     <Compile Include="Controllers\ScreenController.cs" />
     <Compile Include="Controllers\ScriptController.cs" />
     <Compile Include="Global.asax.cs">
@@ -226,6 +226,7 @@
     <Compile Include="Models\Script.cs" />
     <Compile Include="Models\ScriptResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\FlagRepository.cs" />
     <Compile Include="Repository\NotFoundException.cs" />
     <Compile Include="Repository\ScreenRepository.cs" />
     <Compile Include="Repository\ScriptRepository.cs" />

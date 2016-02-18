@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Diagnostics;
 using System.Web.Http;
+using System.Web.Http.Tracing;
 
 namespace ScriptManager
 {
@@ -16,7 +15,7 @@ namespace ScriptManager
 
             config.Routes.MapHttpRoute(
                 name: "ControllerOnly",
-                routeTemplate: "api/{controller}"                
+                routeTemplate: "api/{controller}"
             );
 
             config.Routes.MapHttpRoute(

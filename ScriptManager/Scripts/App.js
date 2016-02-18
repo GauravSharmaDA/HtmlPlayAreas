@@ -1,6 +1,6 @@
 ﻿var sampleApp = angular.module('sampleApp', ['smart-table']);
 
-var httpUrl = 'http://localhost:59899';
+var httpUrl = 'http://itsltp028/ScriptManager';
 
 sampleApp.config(['$routeProvider',
   function ($routeProvider) {
